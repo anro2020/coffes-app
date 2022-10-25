@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <nav>
+            <h1>Cafeteria</h1>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Blog</li>
+            </ul>
+        </nav>
+        <div id="detalle" class="container-detalle"></div>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+
+<script>
+    var index = localStorage.getItem('id');
+    var data = coffes[index];
+
+    console.log(coffes[index]);
+
+    const detalle = document.getElementById("detalle");
+
+    detalle.innerHTML += `<div class="card--detalle">
+            <h1>${data['namec']}</h1>
+            <img class="card--avatar" src="${data['images']}" alt="">
+            <p class="card--description">${data['description']}</p>
+        </div>`;
+
+</script>
